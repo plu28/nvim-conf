@@ -1,0 +1,2 @@
+-- js specific vim configurations
+-- no-op

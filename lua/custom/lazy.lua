@@ -13,3 +13,9 @@ if not vim.loop.fs_stat(lazypath) then
   }
 end
 vim.opt.rtp:prepend(lazypath) -- puts lazy in the run time path
+
+require('lazy').setup({
+  spec = {
+    { import = "custom.plugins" }
+  }
+})
