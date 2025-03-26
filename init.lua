@@ -117,5 +117,11 @@ vim.keymap.set("i", "<Down>", "<Nop>")
 vim.keymap.set("i", "<Left>", "<Nop>")
 vim.keymap.set("i", "<Right>", "<Nop>")
 
+-- Unmap <Shift> arrow keys in insert mode
+vim.keymap.set("i", "<S-Up>", "<Nop>")
+vim.keymap.set("i", "<S-Down>", "<Nop>")
+vim.keymap.set("i", "<S-Left>", "<Nop>")
+vim.keymap.set("i", "<S-Right>", "<Nop>")
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
