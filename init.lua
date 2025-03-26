@@ -111,5 +111,11 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- Pastes without overwriting paste buffer
 vim.keymap.set("x", "<leader>P", "\"_dP")
 
+-- Unmap arrow keys in insert mode
+vim.keymap.set("i", "<Up>", "<Nop>")
+vim.keymap.set("i", "<Down>", "<Nop>")
+vim.keymap.set("i", "<Left>", "<Nop>")
+vim.keymap.set("i", "<Right>", "<Nop>")
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
