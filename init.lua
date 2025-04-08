@@ -83,11 +83,17 @@ vim.keymap.set('n', '<leader>p', '<C-^>', opts)
 -- Make capital G also center the screen
 vim.keymap.set('n', 'G', 'Gzz', opts)
 
--- <leader>ef for pulling up ex in a split
-vim.keymap.set('n', '<leader>ef', ':Sex!<CR>', opts)
+-- <leader>ss for pulling up ex in a split
+vim.keymap.set('n', '<leader>ss', ':Sex!<CR>', opts)
 
--- <leader>er for pulling up ex on current buffer
-vim.keymap.set('n', '<leader>er', ':Ex<CR>', opts)
+-- <leader>se for pulling up ex on current buffer
+vim.keymap.set('n', '<leader>se', ':Ex<CR>', opts)
+
+-- opens up nvim terminal 
+vim.keymap.set('n', '<leader>te', ':te<CR>', opts)
+
+-- opens up nvim terminal in a split
+vim.keymap.set('n', '<leader>ts', ':vsplit | term<CR>', opts)
 
 -- <leader>q for quitting a buffer
 vim.keymap.set('n', '<leader>q', ':q<CR>', opts)

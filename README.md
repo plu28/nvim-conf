@@ -11,6 +11,10 @@ Note: <leader> is Spacebar
 - \[Normal\]<leader><leader>x: Compile entire lua file
 - \[Normal\]<leader>x: Compile current lua line
 - \[Visual\]<leader>x: Compile highlighted lua line(s)
+- \[Normal\]<leader>ss: Pull up ex in a split
+- \[Normal\]<leader>se: Pull up ex in current buffer
+- \[Normal\]<leader>ts: Pull up nvim term in a split
+- \[Normal\]<leader>te: Pull up nvim term in current buffer
 
 ## Telescope
 - \[Normal\]<leader>?: Find recently opened files
