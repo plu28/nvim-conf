@@ -75,6 +75,7 @@ return {
       -- rust_analyzer = {},
       -- tsserver = {},
       eslint = {},
+      jdtls = {},
 
       lua_ls = {
         Lua = {

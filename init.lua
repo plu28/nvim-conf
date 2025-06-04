@@ -129,5 +129,13 @@ vim.keymap.set("i", "<S-Down>", "<Nop>")
 vim.keymap.set("i", "<S-Left>", "<Nop>")
 vim.keymap.set("i", "<S-Right>", "<Nop>")
 
+-- Copies selected line to clipboard (good for sharing line references)
+vim.keymap.set("n", "<leader>L", function()
+  local file = vim.fn.expand "%"
+  local line = vim.fn.line "."
+  vim.fn.setreg("+", string.format("%s:%d", file, line))
+  vim.notify "Copied line reference to clipboard"
+end, { desc = "Copy line reference to clipboard" })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
