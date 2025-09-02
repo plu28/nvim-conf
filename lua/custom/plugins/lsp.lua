@@ -277,7 +277,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
 				automatic_installation = false,
-				handlers = {
+			handlers = {
 					function(server_name)
 						local server = servers[server_name] or {}
 						-- This handles overriding only values explicitly passed
@@ -292,6 +292,7 @@ return {
 			local util = require("lspconfig.util")
 			require("lspconfig").sourcekit.setup({
 				capabilities = capabilities,
+				filetypes = { "swift", "objective-c", "objective-cpp" },
 				root_dir = function(fname)
 					return util.root_pattern("Package.swift", ".git")(fname) or vim.fs.dirname(fname)
 				end,
