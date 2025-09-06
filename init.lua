@@ -83,11 +83,12 @@ vim.keymap.set("n", "<leader>p", "<C-^>", opts)
 -- Make capital G also center the screen
 vim.keymap.set("n", "G", "Gzz", opts)
 
+-- NOTE: No longer using netrw
 -- <leader>ss for pulling up ex in a split
-vim.keymap.set("n", "<leader>ss", ":Sex!<CR>", opts)
+-- vim.keymap.set("n", "<leader>ss", ":Sex!<CR>", opts)
 
 -- <leader>se for pulling up ex on current buffer
-vim.keymap.set("n", "<leader>se", ":Ex<CR>", opts)
+-- vim.keymap.set("n", "<leader>se", ":Ex<CR>", opts)
 
 -- opens up nvim terminal
 vim.keymap.set("n", "<leader>te", ":te<CR>", opts)
@@ -148,6 +149,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- When going back, center screen
 vim.keymap.set("i", "<C-o>", "<C-o>zz")
+
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
