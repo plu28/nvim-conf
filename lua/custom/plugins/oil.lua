@@ -28,9 +28,6 @@ return {
 			vim.keymap.set("n", "<leader>o", function()
 				oil.toggle_float(nil)
 			end)
-			vim.keymap.set("n", "q", function()
-				oil.toggle_float(nil)
-			end)
 		end,
 	},
 	{
