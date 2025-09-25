@@ -153,6 +153,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- When going back, center screen
 vim.keymap.set("i", "<C-o>", "<C-o>zz")
 
+-- Toggle spell check (normal mode)
+vim.keymap.set("n", "<leader>tz", ":setlocal spell!<CR>", { desc = "Toggle spell check" })
+
+-- Auto-fix with first suggestion (normal mode)
+vim.keymap.set("n", "<leader>z", "1z=", { desc = "Fix word with first suggestion" })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
