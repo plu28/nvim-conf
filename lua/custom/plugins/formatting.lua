@@ -13,9 +13,10 @@ return {
 			},
 		},
 		opts = {
-			notify_on_error = false,
+			notify_on_error = true,
 			formatters_by_ft = {
 				lua = { "stylua" },
+				typst = { "typstyle" },
 				-- Conform can also run multiple formatters sequentially
 				-- python = { "isort", "black" },
 				--

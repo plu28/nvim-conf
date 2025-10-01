@@ -221,6 +221,13 @@ return {
 			--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 
 			local servers = {
+				tinymist = {
+					settings = {
+						tinymist = {
+							formatterMode = "typstyle",
+						},
+					},
+				},
 				clangd = {},
 				-- gopls = {},
 				pyright = {},
@@ -277,7 +284,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
 				automatic_installation = false,
-			handlers = {
+				handlers = {
 					function(server_name)
 						local server = servers[server_name] or {}
 						-- This handles overriding only values explicitly passed
