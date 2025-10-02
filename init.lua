@@ -159,5 +159,8 @@ vim.keymap.set("n", "<leader>tz", ":setlocal spell!<CR>", { desc = "Toggle spell
 -- Auto-fix with first suggestion (normal mode)
 vim.keymap.set("n", "<leader>z", "1z=", { desc = "Fix word with first suggestion" })
 
+-- Change the highlight color
+vim.api.nvim_set_hl(0, "GitSignsCurrentLineBlame", { fg = "#888888", italic = true })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
