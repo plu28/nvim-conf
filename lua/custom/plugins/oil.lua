@@ -12,6 +12,9 @@ return {
 		config = function()
 			local oil = require("oil")
 			oil.setup({
+				view_options = {
+					show_hidden = true,
+				},
 				win_options = {
 					signcolumn = "yes:2",
 				},
@@ -23,7 +26,7 @@ return {
 				},
 				keymaps = {
 					["q"] = { "actions.close", mode = "n" },
-				}
+				},
 			})
 			vim.keymap.set("n", "<leader>o", function()
 				oil.toggle_float(nil)
