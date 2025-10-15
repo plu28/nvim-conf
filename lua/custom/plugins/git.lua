@@ -55,6 +55,12 @@ return {
 					require("gitsigns").blame_line,
 					{ buffer = bufnr, desc = "[B]lame [L]ine" }
 				)
+				vim.keymap.set(
+					"n",
+					"<leader>dt",
+					require("gitsigns").diffthis,
+					{ buffer = bufnr, desc = "[D]iff [T]his" }
+				)
 			end,
 		},
 	},
