@@ -70,7 +70,7 @@ vim.keymap.set("n", "<leader>h", "<C-w>h")
 vim.keymap.set("n", "<leader>j", "<C-w>j")
 vim.keymap.set("n", "<leader>k", "<C-w>k")
 vim.keymap.set("n", "<leader>vs", "<cmd>vsplit<CR>")
-vim.keymap.set("n", "<leader>hs", "<cmd>split<CR>")
+-- vim.keymap.set("n", "<leader>hs", "<cmd>split<CR>")
 
 -- Mappings for toggling fullscreen
 vim.keymap.set("n", "<C-\\>", "<C-w>|")
