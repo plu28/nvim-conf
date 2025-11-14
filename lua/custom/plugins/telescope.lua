@@ -9,6 +9,12 @@ return {
 		-- See `:help telescope` and `:help telescope.setup()`
 		require("telescope").setup({
 			defaults = {
+				file_ignore_patterns = {
+					"node_modules",
+					"%.git/",
+					"dist/",
+					"build/",
+				},
 				mappings = {
 					i = {
 						["<C-u>"] = false,
@@ -17,8 +23,8 @@ return {
 				},
 			},
 			extensions = {
-				fzf = {}
-			}
+				fzf = {},
+			},
 		})
 
 		-- Enable telescope fzf native, if installed
@@ -62,6 +68,6 @@ return {
 		vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
 		vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
 		vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-		vim.keymap.set("n", "<leader>E", vim.diagnostic.setloclist, { desc = "Open diagnostics list" }) 
+		vim.keymap.set("n", "<leader>E", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
 	end,
 }
