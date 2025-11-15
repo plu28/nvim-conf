@@ -4,6 +4,8 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		"nvim-lua/popup.nvim",
+		"nvim-telescope/telescope-media-files.nvim",
 	},
 	config = function()
 		-- See `:help telescope` and `:help telescope.setup()`
@@ -30,6 +32,9 @@ return {
 		-- Enable telescope fzf native, if installed
 		pcall(require("telescope").load_extension, "fzf")
 
+		-- Enable media files
+		require("telescope").load_extension("media_files")
+
 		-- See `:help telescope.builtin`
 		vim.keymap.set(
 			"n",
@@ -54,6 +59,7 @@ return {
 		vim.keymap.set("n", "<leader>gf", require("telescope.builtin").git_files, { desc = "Search [G]it [F]iles" })
 		vim.keymap.set("n", "<leader>sf", require("telescope.builtin").find_files, { desc = "[S]earch [F]iles" })
 		vim.keymap.set("n", "<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp" })
+		vim.keymap.set("n", "<leader>sm", ":Telescope media_files<CR>", { desc = "[S]earch [M]edia" })
 
 		vim.keymap.set(
 			"n",
