@@ -60,6 +60,7 @@ return {
 		vim.keymap.set("n", "<leader>sf", require("telescope.builtin").find_files, { desc = "[S]earch [F]iles" })
 		vim.keymap.set("n", "<leader>sh", require("telescope.builtin").help_tags, { desc = "[S]earch [H]elp" })
 		vim.keymap.set("n", "<leader>sm", ":Telescope media_files<CR>", { desc = "[S]earch [M]edia" })
+		vim.keymap.set("n", "<leader>sk", ":Telescope keymaps<CR>", { desc = "[S]earch [K]eymaps" })
 
 		vim.keymap.set(
 			"n",

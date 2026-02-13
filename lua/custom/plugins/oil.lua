@@ -30,7 +30,7 @@ return {
 			})
 			vim.keymap.set("n", "<leader>o", function()
 				oil.toggle_float(nil)
-			end)
+			end, { desc = "Toggle Oil" })
 		end,
 	},
 	{
