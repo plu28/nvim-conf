@@ -296,14 +296,14 @@ return {
 			})
 
 			-- Manually config sourcekit since Mason doesn't support it
-			local util = require("lspconfig.util")
-			require("lspconfig").sourcekit.setup({
-				capabilities = capabilities,
-				filetypes = { "swift", "objective-c", "objective-cpp" },
-				root_dir = function(fname)
-					return util.root_pattern("Package.swift", ".git")(fname) or vim.fs.dirname(fname)
-				end,
-			})
+			-- local util = require("lspconfig.util")
+			-- vim.lsp.config(vim.lsp.sourcekit.setup({
+			-- 	capabilities = capabilities,
+			-- 	filetypes = { "swift", "objective-c", "objective-cpp" },
+			-- 	root_dir = function(fname)
+			-- 		return util.root_pattern("Package.swift", ".git")(fname) or vim.fs.dirname(fname)
+			-- 	end,
+			-- }))
 		end,
 	},
 }
