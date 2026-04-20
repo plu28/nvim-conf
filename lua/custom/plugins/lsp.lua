@@ -165,6 +165,7 @@ return {
         'lua_ls', -- Lua Language server
         'stylua', -- Used to format Lua code
         'typescript-language-server',
+        'cmakelang'
         -- You can add other tools here that you want Mason to install
       })
 
