@@ -115,8 +115,12 @@ return {
           --
           -- This may be unwanted, since they displace some of your code
           if client and client:supports_method('textDocument/inlayHint', event.buf) then
-            map('<leader>th', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf }) end, '[T]oggle Inlay [H]ints')
+            map('<leader>tih', function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf }) end, '[T]oggle [I]nlay [H]ints')
           end
+
+          -- Special keybindings dependent on client
+          local client = vim.lsp.get_client_by_id(event.data.client_id)
+          if client and client.name == 'clangd' then map('<leader>c', '<cmd>LspClangdSwitchSourceHeader<CR>', 'Toggle [C] Header') end
         end,
       })
 
@@ -165,7 +169,7 @@ return {
         'lua_ls', -- Lua Language server
         'stylua', -- Used to format Lua code
         'typescript-language-server',
-        'cmakelang'
+        'cmakelang',
         -- You can add other tools here that you want Mason to install
       })
 
@@ -202,6 +206,7 @@ return {
           Lua = {},
         },
       })
+
       vim.lsp.enable 'lua_ls'
 
       vim.lsp.enable 'racket_langserver'
